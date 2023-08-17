@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300&family=Italiana&family=Kaisei+Decol&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    font-family: 'Kaisei Decol', serif;
+    list-style: none;
+    font-size: 2rem;
+}
+
+i {
+    font-size: 25px;
+}
+
+p {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-family: 'Italiana', serif;
+}
+
+body {
+    display: flex;
+    position: relative;
+}
+
+.absolute__container {
+    border-right: 1px solid #111;
+    position: fixed;
+    min-width: 50%;
+    background: #ffffff;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: .1rem .4rem;
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .bag {
+            display: flex;
+            align-items: center;
+            column-gap: 2px;
+        }
+    }
+
+    .nav__links {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        li {
+            cursor: pointer;
+        }
+
+        li:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+        }
+    }
+
+    .social__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            transition: .5 all ease-in-out;
+            cursor: pointer;
+        }
+
+        p:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+        }
+    }
+}
+
+main {
+    min-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+    .main__content {
+        max-width: 50%;
+        display: flex;
+        flex-flow: column;
+        row-gap: 1.5rem;
+
+        .grid__col {
+            max-width: 100%;
+            display: flex;
+            
+            .product {
+                display: flex;
+                flex-flow: column;
+                max-width: 50%;
+
+                img {
+                    max-width: 100%;
+                }
+
+                .data {
+                    background-color: #ffffff;
+                    display: flex;
+                    flex-flow: column;
+                    row-gap: 2rem;
+                    padding: .1rem 1.3rem;
+
+                    .info, .details {
+                        display: grid;
+                        grid: 0 / repeat(2, minmax(0, 1fr));
+                    }
+
+                    .details {
+                        p:hover {
+                            text-decoration: underline;
+                            text-decoration-thickness: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
